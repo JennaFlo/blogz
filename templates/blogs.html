@@ -2,7 +2,7 @@
 
 {% block content %} 
 {% if single_post == False %}
-<h1>Build a Blog!</h1>
+<h1>Create and Store your blogs!</h1>
 
     
 <hr />
@@ -16,6 +16,7 @@
             
                 <a href='/blogs?id={{blog.id}}'><h3>{{blog.name}}</h3></a>
                 <h4><p>{{blog.blog}}</p></h4>
+                <p>Posted by:<a href="/blogs?member={{blog.user.id}}">{{blog.user.username}}</a></p>
                   
                 
             

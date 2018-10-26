@@ -1,5 +1,5 @@
 body{
-    background-color: purple;
+    background-color: rgb(233, 106, 233);
 }
 
 h1{
@@ -10,18 +10,18 @@ h1{
 }
 
 h2{
-    color: pink;
+    color: rgb(211, 34, 63);
     font-family: 'Tahoma'
 }
 
 h3{
-    color: darkorange;
+    color: rgb(179, 81, 16);
     font-size: 14px;
     font-family: 'Tahoma'
 }
 
 h4{
-    color: lightseagreen;
+    color: rgb(26, 104, 100);
     font-size: 16px;
     font-family: 'Tahoma'
 }

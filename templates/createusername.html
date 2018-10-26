@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <p></p>
+    <form method='post'>
+      
+      
+      <h1>Create a new username:</h1>
+      
+      <div>
+      <label for="username_box">Username</label>
+        <input id="username_box" type="text" name="username" value="{{username}}"/>
+      {% if username_error == 'blank_error' %}
+        <span class="error"><strong>Error:</strong>You did not enter a username here!</span>
+      {% endif %}
+      {% if username_error == 'format_error' %}
+        <span class="error"><strong>Error:</strong>You must have 3-20 characters and no special characters!</span>
+      {% endif %}
+      {% if username_error == 'space_error' %}
+        <span class="error"><strong>Error:</strong>You cannot have a space!</span>
+      {% endif %}
+      </div>
+      <br>
+      <div>
+       <label for="password">Password</label>
+         <input id="password" type="password" name="password_entered" value=""/>
+      
+      {% if password_error == 'blank_error' %}
+        <span class="error"><strong>Error:Invalid Info</strong>You did not enter a password</span>
+      {% endif %}
+      {% if password_error == 'space_error' %}
+        <span class="error"><strong>Error:</strong>You cannot have a space!</span>
+      {% endif %}
+      {% if password_error == 'format_error' %}
+      <span class="error"><strong>Error:Invalid Info</strong>You must have 3-20 characters and no special characters!</span>
+      {% endif %}
+      
+        </div>
+      <br>
+      <div>
+        <label for="verifypassword">Verify Password</lable>
+          <input id="verifypassword" type="password" name="verifypassword_entered" value=""/>
+      
+      {% if verify_error == 'blank_error' %}
+        <span class="error"><strong>Invalid info</strong>You did not verify your password!</span>
+      {% endif %}
+      {% if verify_error == 'format_error' %}
+      <span class="error"><strong>Error:Invalid Info</strong>The passwords do not match!</span>
+    {% endif %}
+        </div>
+      <br>
+      <div>
+        <label for="email">Email(optional)</label>
+          <input id="email_info" type="text" name="email_input" value="{{email}}"/>
+      {% if email_error == 'space_error' %}
+          <span class="error"><strong>Error:</strong>You cannot have a space!</span>
+      {% endif %}
+      {% if email_error == 'atsign_error' %}
+          <span class="error"><strong>Error:</strong>You cannot more than one @ sign or period!</span>
+      {% endif %}
+      {% if email_error == 'period_error' %}
+        <span class="error"><strong>Error:</strong>You cannot have a more than one @ sign or period!</span>
+      {% endif %}
+      {% if email_error == 'format_error' %}
+        <span class="error"><strong>Email info invalid</strong>You must have 3-20 characters or more than one . or @!</span>
+      {% endif %}
+      
+        </div>
+      <br>
+      <div>
+        <button type="submit">Submit your information</button>
+           
+      </div>
+       
+         
+      </form>
+
+{% endblock %}
