@@ -13,6 +13,9 @@
       {% if username_error == 'blank_error' %}
         <span class="error"><strong>Error:</strong>You did not enter a username here!</span>
       {% endif %}
+      {% if username_error == 'already_exists' %}
+        <span class="error"><strong>Error:</strong>Username already exists!</span>
+      {% endif %}
       {% if username_error == 'format_error' %}
         <span class="error"><strong>Error:</strong>You must have 3-20 characters and no special characters!</span>
       {% endif %}

@@ -120,8 +120,8 @@ def create_username():
         p_test = password_test(password)
         pv_test = verify_password_test(verify_password, password)
         e_test = email_test(email)
-        if already_exists and (u_test != "" or p_test != "" or pv_test !="" or e_test != ""):
-            return render_template('createusername.html', username = username, email = email,  username_error = "username already exists", password_error = p_test, verify_error = pv_test, email_error = e_test)
+        if already_exists:
+            return render_template('createusername.html', username = username, email = email,  username_error = "already_exists", password_error = p_test, verify_error = pv_test, email_error = e_test)
         elif u_test != "" or p_test != "" or pv_test !="" or e_test != "":
             return render_template('createusername.html', username = username, email = email,  username_error = u_test, password_error = p_test, verify_error = pv_test, email_error = e_test)
         else:
